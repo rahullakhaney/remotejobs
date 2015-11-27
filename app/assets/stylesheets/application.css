@@ -13739,7 +13739,6 @@ button.close {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 
 .carousel-control:hover,
@@ -22229,7 +22228,6 @@ body.bootsy_text_area.form-control {
   -webkit-text-shadow: 0 1px 0 white;
   text-shadow: 0 1px 0 white;
   opacity: 0.8;
-  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: alpha(opacity=80);
 }
 
@@ -22239,7 +22237,6 @@ body.bootsy_text_area.form-control {
   text-decoration: none;
   cursor: pointer;
   opacity: 0.4;
-  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=40);
   filter: alpha(opacity=40);
 }
 
@@ -22340,7 +22337,6 @@ button.toast-close-button {
   box-shadow: 0 0 12px #999999;
   color: white;
   opacity: 0.8;
-  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: alpha(opacity=80);
 }
 
@@ -22349,7 +22345,6 @@ button.toast-close-button {
   -webkit-box-shadow: 0 0 12px black;
   box-shadow: 0 0 12px black;
   opacity: 1;
-  -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: alpha(opacity=100);
   cursor: pointer;
 }
