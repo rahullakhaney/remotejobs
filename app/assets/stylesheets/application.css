@@ -13927,7 +13927,7 @@ button.close {
 }
 
 @at-root {
-    @  -ms-viewport {
+    @-ms-viewport {
     width: device-width;
   }
 }
