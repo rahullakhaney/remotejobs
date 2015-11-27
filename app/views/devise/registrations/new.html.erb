@@ -1,0 +1,52 @@
+<% content_for :navbar do %>
+<%= render 'shared/header' %>
+<% end %>
+
+<div class="wrapper">
+	<div class="content">
+
+		<main role="main">
+			<div class="authform">
+
+				<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'new_user' }) do |f| %>
+				<%= f.error_notification %>
+
+				<h3>Welcome, fellow nomad!</h3>
+
+				<p class="intro">Sign up instantly</p>
+				<div class="row social-login">
+					<div class="col-xs-12 col-sm-4">
+						<a class="btn btn-signup facebook" href="/users/auth/facebook"><i class="fa fa-facebook"></i></a>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<a class="btn btn-signup twitter" href="/users/auth/twitter"><i class="fa fa-twitter"></i></a>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<a class="btn btn-signup linkedin" href="/users/auth/linkedin"><i class="fa fa-linkedin"></i></a>
+					</div>
+					<div class="col-xs-12">
+						<p class="divider">Or</p>
+					</div>
+				</div>
+
+				<div class="form-inputs">
+				<div class="form-group">
+					<%= f.input_field :email, required: true, autofocus: true, class: 'form-control', label: false, placeholder: 'Email Address' %>
+				</div>
+					<div class="form-group">
+						<%= f.input_field :password, required: true, class: 'form-control', label: false ,hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: 'Password' %>
+					</div>
+					<div class="form-group">
+						<%= f.input_field :password_confirmation, required: true, class: 'form-control', placeholder: 'Confirm Password' %>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<%= f.button :submit, "Sign up" %>
+				</div>
+				<% end %>
+
+			</div>
+		</main>
+	</div>
+</div>

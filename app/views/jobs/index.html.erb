@@ -1,0 +1,81 @@
+<% content_for :navbar do %>
+<%= render 'shared/header' %>
+<% end %>
+
+  <div class="wrapper">
+<div class="content-wrap">
+  <div class="content">
+    <main role="main">
+      <section class="container">
+
+      <div class="row">
+
+          <!-- Facets -->
+          <div class="hidden-xs side-menu">
+            <div id="facets">
+              <div class="facet">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-info"><b>Job Categories</b></li>
+                  <li class="list-group-item">
+                    <label class="radio">
+                      <input class="checkbox radios" type="checkbox">
+                      <span class="outer"><span class="inner"></span></span>
+                      <a href="#"><span class="category"><%= link_to "All", jobs_path %></span></a><span class="label label-default pull-right"><%= @jobs.count %></span>
+                    </label>
+                  </li>
+                  <% Category.all.each do |category| %>
+  <li class="list-group-item">
+                    <label class="radio">
+                      <input class="checkbox radios" type="checkbox">
+                      <span class="outer"><span class="inner"></span></span>
+                      <a href="#"><span class="category"><%= link_to category.name, jobs_path(category: category.name) %></span></a><span class="label label-default pull-right"><%= category.jobs.count %></span>
+                    </label>
+                  </li>
+<% end %>
+                </ul>
+              </div>
+            </div>
+            <div id="footer">
+              <p><%= link_to "Post Job", new_job_path, class: 'btn btn-primary' %></p>
+
+              <p class="muted">Working Nomads curates remote digital jobs from around the web.</p>
+
+              <p class="muted">&copy; 2015 Working Nomads.</p>
+            </div>
+          </div>
+          <!-- /Facets -->
+
+          <div id="jobs" class="col-sm-10 col-xs-12 col-sm-offset-2">
+            <div class="page-header clearfix">
+              <h3 class="pull-left">Latest Remote Jobs</h3>
+            </div>
+
+
+<% @jobs.each do |job| %>
+
+<div class="job hit clearfix post">
+  <a class="open-button" href="#">
+    <div class="additional-info pull-right">
+      <p><span class="date" am-time-ago="hit.published_at"><%= time_ago_in_words(job.created_at) %> ago</span>
+        <span class="category <%= job.category.name %>"><%= job.category.name %></span>
+      </p>
+    </div>
+  </a><div class="media-body"><a class="open-button" href="#">
+</a><h4><a class="open-button" href="#">
+</a><a href="#" class="hidden-sm hidden-xs open-button" id="view-job"><%= link_to job.title, job %></a>
+<span><%= job.company %></span>
+</h4>
+
+<div class="favorite">
+  <a id="favourite-job"><i class="fa fa-star"></i></a>
+</div>
+</div>
+</div>
+    
+  <% end %>
+
+</section>
+</main>
+</div>
+</div>
+</div>

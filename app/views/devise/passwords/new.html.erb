@@ -1,0 +1,25 @@
+<% content_for :navbar do %>
+<%= render 'shared/header' %>
+<% end %>
+<div class="wrapper">
+		<div class="content">
+
+			<main role="main">
+				<div class="authform">
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+<h3 class="title">Forgot your password?</h3>
+    <p class="intro margin-bottom-large">Enter your email below and we'll send you a password reset link.</p>
+  <div class="form-group">
+    <%= f.input_field :email, required: true, autofocus: true, class: 'form-control', placeholder: 'Enter Email' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Reset Password" %>
+  </div>
+<% end %>
+</div>
+</main>
+</div>
+</div>

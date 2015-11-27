@@ -1,0 +1,56 @@
+<% content_for :navbar do %>
+<%= render 'shared/header' %>
+<% end %>
+
+
+
+
+
+	<div class="wrapper">
+		<div class="content">
+
+			<main role="main">
+				<div class="authform">
+
+					<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'new_user' }) do |f| %>
+					<h3>Welcome back!</h3>
+
+					<p class="intro">Login to your account</p>
+					<div class="row social-login">
+						<div class="col-xs-12 col-sm-4">
+							<a class="btn btn-signup facebook" href="/users/auth/facebook"><i class="fa fa-facebook"></i></a>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<a class="btn btn-signup twitter" href="/users/auth/twitter"><i class="fa fa-twitter"></i></a>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<a class="btn btn-signup linkedin" href="/users/auth/linkedin"><i class="fa fa-linkedin"></i></a>
+						</div>
+						<div class="col-xs-12">
+							<p class="divider">Or</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-group">
+							<%= f.input_field :email, required: true, autofocus: true, label: false, :class => 'form-control' %>
+						</div>
+						<div class="form-group">
+							<%= f.input_field :password, required: true, class: 'form-control', label: false %>
+						</div>
+						<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+					</div>
+
+					<div class="form-actions">
+						<%= f.button :submit, "Log in" %>
+					</div>
+					<div class="sign-up-link">
+						<a class="" href="/users/sign_up">Don&#39;t have an account? Sign up</a>
+						<br><br>
+						<a class="" href="/users/password/new">Forgot password?</a>
+					</div>
+					<% end %>        
+				</div>
+
+			</main>
+		</div>
+	</div>

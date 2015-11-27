@@ -1,0 +1,46 @@
+<section id="post-job" class="container">
+	<div class="row">
+
+		<div class="hidden-xs side-menu">
+			<div id="advertise">
+				<ul class="checklist">
+					<li class="first active"><span>1</span> Enter your job details</li>
+					<li class="second "><span>2</span> Review your listing</li>
+					<li class="third"><span>3</span> Purchase & Go Live</li>
+				</ul>
+			</div>
+			<div id="footer">
+				<h4 class="promo">Advertise your remote job for 30 days<br><span>Only $99!</span></h4>
+				<p class="muted">Working Nomads curates remote digital jobs from around the web.</p>
+				<p class="muted">&copy; 2015 Working Nomads.</p>
+			</div>
+		</div>
+
+		<div id="job-form" class="content-main col-sm-10 col-xs-12 col-sm-offset-2">
+			<div class="clearfix">
+				<h3 class="title pull-left"><span>1</span> Enter your job details</h3>
+				<p class="job-preview-tip pull-right visible-md visible-lg" data-toggle="tooltip" data-placement="bottom" title="<h3>Job Listing Preview</h3><img src='/assets/job-preview.png'>"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;What will your job listing look like?</p>
+			</div>
+			<div class="row">
+				<div class="col-md-10">
+			<%= simple_form_for(@job, html: { class: 'form-horizontal new_job'}) do |f| %>
+			<%= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a category" }, input_html: { class: "form-control selectpicker" } %>
+			
+			<%= f.input :title, label: "Job Title", input_html: { class: "form-control" }, label: false, placeholder: 'Job Title' %>
+			<%= f.input :description, label: "Job Description", input_html: { class: "form-control", cols: "20", rows: "5" }, label: false, placeholder: 'Job Description' %>
+			<%= f.input :company, label: "Your Company", input_html: { class: "form-control" }, label: false, placeholder: 'Your Company e.g Apple' %>
+			<%= f.input :link, label: "Link to Job", input_html: { class: "form-control" }, label: false, placeholder: 'Link where the applicant can apply' %>
+			<%= f.input :criteria, label: "Criteria", input_html: { class: "form-control", cols: "20", rows: "5" }, label: false, placeholder: 'Explain what the applicant should do to apply (ie. Email your cover letter to our@email.com)' %>
+			<br/>
+			<%= f.button :submit, class: 'submit' %>
+			<% end %>
+			</div>
+			</div>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+$('.selectpicker').selectpicker();
+</script>

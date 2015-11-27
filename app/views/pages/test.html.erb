@@ -1,0 +1,73 @@
+<% content_for :navbar do %>
+<%= render 'shared/header' %>
+<% end %>
+
+
+<!-- <button class="menu-button" id="open-menu">Open Menu</button> -->
+<div class="content-wrap">
+  <div class="content">
+
+  <main role="main">
+      <section id="post-job" class="container">
+        <div class="row">
+
+          <div class="hidden-xs side-menu">
+            <div id="advertise">
+              <ul class="checklist">
+                <li class="first active"><span>1</span> Enter your job details</li>
+                <li class="second "><span>2</span> Review your listing</li>
+                <li class="third"><span>3</span> Purchase & Go Live</li>
+              </ul>
+            </div>
+            <div id="footer">
+              <h4 class="promo">Advertise your remote job for 30 days<br><span>Only $99!</span></h4>
+              <p class="muted">Working Nomads curates remote digital jobs from around the web.</p>
+              <p class="muted">&copy; 2015 Working Nomads.</p>
+            </div>
+          </div>
+
+          <div id="job-form" class="content-main col-sm-10 col-xs-12 col-sm-offset-2">
+
+            <form accept-charset="UTF-8" action="/jobs" class="simple_form form-horizontal new_job" id="new_job" method="post" novalidate="novalidate"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sJQseXgv0siCOXhd78NqmvgyzygiGkjtLACWLzPCs38=" /></div>
+
+              <div class="clearfix">
+                <h3 class="title pull-left"><span>1</span> Enter your job details</h3>
+                <p class="job-preview-tip pull-right visible-md visible-lg" data-toggle="tooltip" data-placement="bottom" title="<h3>Job Listing Preview</h3><img src='/assets/job-preview.png'>"><i class="ion-help-circled"></i>&nbsp;&nbsp;What will your job listing look like?</p>
+              </div>
+
+              <div class="form-group string optional job_title"><label class="string optional col-lg-3 control-label" for="job_title">Job Title</label><div class="col-lg-9"><input autofocus="autofocus" class="string optional form-control" id="job_title" name="job[title]" placeholder="eg. Web Developer" type="text" /></div></div>
+              <div class="form-group bootsy optional job_description"><label class="bootsy optional col-lg-3 control-label" for="job_description">Job Description</label><div class="col-lg-9"><textarea class="bootsy optional form-control bootsy_text_area" data-bootsy-alert-unsaved="false" data-bootsy-color="false" data-bootsy-emphasis="true" data-bootsy-font-styles="true" data-bootsy-html="false" data-bootsy-image="false" data-bootsy-link="true" data-bootsy-lists="true" data-bootsy-uploader="false" id="job_description" name="job[description]" placeholder="Tell everyone about your company, who you&#39;re looking to hire, and what the position is all about" rows="10">
+              </textarea></div></div>
+              <div class="form-group string optional job_company"><label class="string optional col-lg-3 control-label" for="job_company">Your Company</label><div class="col-lg-9"><input class="string optional form-control" id="job_company" name="job[company]" placeholder="eg. Apple" type="text" /></div></div>
+              <div class="form-group url optional job_url controls controls-row"><label class="url optional col-lg-3 control-label" for="job_url">How to apply</label><div class="col-lg-9">
+                <input class="string url optional form-control form-control" id="job_url" name="job[url]" placeholder="Link to where the applicant can apply (optional)" type="url" />
+                <!-- <span class="divider text-center clearfix">or</span> --><br>
+                <textarea class="text optional form-control" id="job_instructions" name="job[instructions]" placeholder="Explain what the applicant should do to apply (ie. &#39;Email your cover letter to our@email.com&#39;)">
+                </textarea>
+              </div></div><div class="form-group radio_buttons optional job_category_id"><label class="radio_buttons optional col-lg-3 control-label">Job Category</label><div class="col-lg-9"><span class="radio inline"><label for="job_category_id_25"><input class="radio_buttons optional" id="job_category_id_25" name="job[category_id]" type="radio" value="25" />Development</label></span><span class="radio inline"><label for="job_category_id_26"><input class="radio_buttons optional" id="job_category_id_26" name="job[category_id]" type="radio" value="26" />Design</label></span><span class="radio inline"><label for="job_category_id_27"><input class="radio_buttons optional" id="job_category_id_27" name="job[category_id]" type="radio" value="27" />Customer Success</label></span><span class="radio inline"><label for="job_category_id_29"><input class="radio_buttons optional" id="job_category_id_29" name="job[category_id]" type="radio" value="29" />Management (Project/Product/Exec)</label></span><span class="radio inline"><label for="job_category_id_28"><input class="radio_buttons optional" id="job_category_id_28" name="job[category_id]" type="radio" value="28" />Marketing</label></span><span class="radio inline"><label for="job_category_id_30"><input class="radio_buttons optional" id="job_category_id_30" name="job[category_id]" type="radio" value="30" />System Administration</label></span></div></div>
+              <div class="form-group radio_buttons optional job_terms_accepted controls controls-row"><label class="radio_buttons optional col-lg-3 control-label" for="job_terms_accepted">Terms &amp; Conditions</label><div class="col-lg-9">
+
+                <div class="col-sm-9">
+                  <input name="job[terms_accepted]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="job_terms_accepted" name="job[terms_accepted]" type="checkbox" value="1" /></label>
+                  <div class="disclaimer">
+                    <p>By accepting our terms, you agree that your job listing is for a remote-based position and qualifies one of the job categories selected above.</p>
+                    <p>If we believe that your job doesn't meet the requirements for our website, we reserve the right to remove your job listing, and you will receive a <strong>full refund</strong> of the amount that you paid.</p>
+                  </div>
+                </div>
+              </div></div>
+
+              <div class="clearfix">
+                <input class="submit" name="commit" type="submit" value="Preview your job" />
+
+
+              </div>
+
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+
+

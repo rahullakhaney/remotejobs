@@ -1,0 +1,48 @@
+<header>
+            <nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" id="open-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/jobs">Working Nomads</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-left col-md-6">
+        <!-- Search bar -->
+<div class="input-group input-group-lg m-t col-md-12 search">
+  <input type="text" class="form-control string ng-pristine ng-untouched ng-valid" placeholder="Search for a remote job">
+</div>
+
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+      <% if user_signed_in? %>
+            <li class=""><a href="/favorites"><i class="fa fa-star"></i> &nbsp;&nbsp;Job Bookmarks</a></li>
+    <li>
+      <div class="dropdown clearfix">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+          Account
+          ▾
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+          <li role="presentation"><%= link_to "Account", edit_user_registration_path %></li>
+          <li role="presentation"><a href="https://workingnomads.zendesk.com/hc/en-us/requests/new" target="_blank">Need help?</a></li>
+              <li role="presentation" class="divider"></li>
+          <li role="presentation"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </li>
+    <% else %>
+      <li><%= link_to "Login", new_user_session_path %></li>
+      <li><%= link_to "Register", new_user_registration_path %></li>
+    <% end %>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+          </header>
