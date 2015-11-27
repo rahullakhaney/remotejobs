@@ -18618,7 +18618,7 @@ body .stripe-button-el {
 .visitors-index .navbar-home .navbar-brand {
   font-weight: 800;
   font-size: 1.8em;
-  margin: 1em auto;
+  margin: 2em auto;
   width: 300px;
   height: 66px;
   line-height: 1.1;
@@ -18633,7 +18633,7 @@ body .stripe-button-el {
 .visitors-index section#intro {
   position: relative;
   text-align: center;
-  background: url(http://www.workingnomads.co/assets/bg-featured1-491b81aae485a73b8134c22478367e4b.jpg) top center;
+  background: url(https://images.unsplash.com/photo-1441109296207-fd911f7cd5e5?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.0.0&ixlib=rb-0.3.5&q=50&w=1300) top center;
   background-size: cover;
   -ms-behavior: url(extras/backgroundsize.min.htc);
   padding: 0;
