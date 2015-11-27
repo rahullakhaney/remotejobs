@@ -5547,7 +5547,7 @@ th {
 }
 
 @at-root {
-    @  font-face {
+    @font-face {
     font-family: 'Glyphicons Halflings';
     src: url("/assets/bootstrap/glyphicons-halflings-regular-4031480adb2e20146d9d6c06855e6a21.eot");
     src: url("/assets/bootstrap/glyphicons-halflings-regular-4031480adb2e20146d9d6c06855e6a21.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular-c575a06b0f5e17a30eccb36f64777cc3.woff2") format("woff2"), url("/assets/bootstrap/glyphicons-halflings-regular-21d7f9622a10fe477b52d4669383bf33.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular-af674dc7931456d66fcdcb0ad81eaedb.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular-593900095f6b4fa0bc3471bad48230d9.svg#glyphicons_halflingsregular") format("svg");
