@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
   	if current_user
-  		redirect_to test_path
+  		redirect_to jobs_path
   	end
   end
 
