@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
 before_action :find_job, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!, only: [:edit, :create, :destroy, :new]
 def index
 	if params[:category].blank?
 			@jobs = Job.all.order("created_at DESC")
